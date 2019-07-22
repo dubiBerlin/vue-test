@@ -1,12 +1,19 @@
 <template>
   <div id="app">
-    <router-view />
+    <!-- <router-view /> -->
+    <MessageList :messages="messages" />
   </div>
 </template>
 
 <script>
+import MessageList from "./components/MessageList";
 export default {
-  name: "App"
+  data: () => ({ messages: ["Hey John", "Howdy Paco"] }),
+
+  name: "App",
+  components: {
+    MessageList
+  }
 };
 </script>
 
