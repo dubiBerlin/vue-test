@@ -1,7 +1,7 @@
 <template>
   <div id="app">
-    <!-- <router-view /> -->
-    <MessageList :messages="messages" />
+    <router-view />
+    <!-- <MessageList :messages="messages" /> -->
   </div>
 </template>
 
