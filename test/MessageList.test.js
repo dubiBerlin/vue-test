@@ -34,4 +34,9 @@ describe('MessageList.test.js', () => {
     // Or with CSS selector
     expect(cmp.contains('.message')).toBe(true)
   })
+
+  it('Both, MessageList and Message are vue instances', () => {
+    expect(cmp.isVueInstance()).toBe(true)
+    expect(cmp.find(Message).isVueInstance()).toBe(true)
+  })
 })
