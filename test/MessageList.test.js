@@ -3,7 +3,6 @@ import MessageList from '../src/components/MessageList'
 
 describe('MessageList.test.js', () => {
   let cmp
-
   beforeEach(() => {
     cmp = mount(MessageList, {
       // Be aware that props is overridden using `propsData`
@@ -11,6 +10,15 @@ describe('MessageList.test.js', () => {
         messages: ['Cat']
       }
     })
+  })
+
+  it('is a MessageList component', () => {
+    expect(cmp.is(MessageList)).toBe(true)
+    expect(cmp.is('ul')).toBe(true)
+  })
+
+  it('has .message class ', () => {
+    expect(cmp.find('.message').element).toBeInstanceOf(HTMLElement)
   })
 
   it('has received ["Cat"] as the message property', () => {

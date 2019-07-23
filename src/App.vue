@@ -5,6 +5,7 @@
 </template>
 
 <script>
+// npm run unit -- -u
 import MessageList from "./components/MessageList";
 export default {
   data: () => ({ messages: ["Hey John", "Howdy Paco", "Bruno Wesno"] }),
