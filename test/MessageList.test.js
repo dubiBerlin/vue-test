@@ -1,5 +1,6 @@
 import { mount } from '@vue/test-utils'
 import MessageList from '../src/components/MessageList'
+import Message from '../src/components/Message.vue'
 
 describe('MessageList.test.js', () => {
   let cmp
@@ -27,5 +28,10 @@ describe('MessageList.test.js', () => {
 
   it('has the expected html structure', () => {
     expect(cmp.element).toMatchSnapshot()
+  })
+  it('contains a Message component', () => {
+    expect(cmp.contains(Message)).toBe(true)
+    // Or with CSS selector
+    expect(cmp.contains('.message')).toBe(true)
   })
 })
