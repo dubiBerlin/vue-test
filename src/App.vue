@@ -1,6 +1,5 @@
 <template>
   <div id="app">
-    <!-- <router-view /> -->
     <MessageList :messages="messages" />
   </div>
 </template>
