@@ -39,4 +39,15 @@ describe('MessageList.test.js', () => {
     expect(cmp.isVueInstance()).toBe(true)
     expect(cmp.find(Message).isVueInstance()).toBe(true)
   })
+
+  it('Message element exists!', () => {
+    expect(cmp.find('.message').exists()).toBe(true)
+  })
+  it('Message is not empty', () => {
+    expect(cmp.find('.message').isEmpty()).toBe(false)
+  })
+
+  // it('Span element exists', () => {
+  //   let el = cmp.find('.message span').element
+  // })
 })

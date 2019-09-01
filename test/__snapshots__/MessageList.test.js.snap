@@ -5,7 +5,9 @@ exports[`MessageList.test.js has the expected html structure 1`] = `
   <li
     class="message"
   >
-    Cat
+    <span>
+      Cat
+    </span>
   </li>
 </ul>
 `;
