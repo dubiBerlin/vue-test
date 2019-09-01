@@ -47,7 +47,14 @@ describe('MessageList.test.js', () => {
     expect(cmp.find('.message').isEmpty()).toBe(false)
   })
 
-  // it('Span element exists', () => {
-  //   let el = cmp.find('.message span').element
-  // })
+  it('Span element exists', () => {
+    let el = cmp.find('.message span').element
+  })
+
+  it('Message component has the .message class', () => {
+    expect(cmp.find(Message).classes()).toContain('message')
+  })
+  it('Message component has style padding-top: 10', () => {
+    expect(cmp.find(Message).attributes().style).toBe('margin-top: 10px;')
+  })
 })

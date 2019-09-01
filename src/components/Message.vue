@@ -1,5 +1,5 @@
 <template>
-  <li class="message">
+  <li style="margin-top: 10px" class="message">
     <span>{{ message }}</span>
   </li>
 </template>
