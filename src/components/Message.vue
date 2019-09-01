@@ -1,5 +1,5 @@
 <template>
-  <li style="margin-top: 10px" class="message">
+  <li style="margin-top: 10px" class="message" @click="handleClick">
     <span>{{ message }}</span>
   </li>
 </template>
@@ -7,6 +7,7 @@
 import axios from "axios";
 
 export default {
+  name: "Message",
   props: {
     message: {
       type: String,
@@ -16,6 +17,11 @@ export default {
     author: {
       type: String,
       default: "Paco"
+    }
+  },
+  methods: {
+    handleClick() {
+      this.$emit("message-clicked", this.message);
     }
   },
   created() {
