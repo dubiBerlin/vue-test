@@ -7,7 +7,17 @@
 import axios from "axios";
 
 export default {
-  props: ["message"],
+  props: {
+    message: {
+      type: String,
+      required: true,
+      validator: message => message.length > 1
+    },
+    author: {
+      type: String,
+      default: "Paco"
+    }
+  },
   created() {
     axios
       .get(
